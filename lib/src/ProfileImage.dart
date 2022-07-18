@@ -3,15 +3,15 @@ class ProfileImage extends StatelessWidget {
   final double top;
   final double left;
   final double diameter;
-  final double image;
+  final String link;
 
   const ProfileImage({
     required Key key, //required ekkendi
     required this.top,
     required this.diameter,
-    required this.image,
+    required this.link,
     required this.left,
-}) : super(key: key);
+}): super(key: key);
 
 
 
@@ -23,13 +23,13 @@ class ProfileImage extends StatelessWidget {
       child: SizedBox(
         height: diameter,
         width: diameter,
-        /*child: ClipRRect(
+        child: ClipRRect(
           child: Image.network(
-            image,
+            link,
             fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(300.0),
-        ),*/
+        ),
       ),
     );
   }

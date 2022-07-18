@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class ProfileTile extends StatelessWidget {
   final double top;
   final double left;
-  final double title;
-  final double subTitle;
+  final String title;
+  final String subTitle;
   final double factor;
 
   ProfileTile({
@@ -26,11 +26,11 @@ class ProfileTile extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
           color: Colors.white,
-          boxShadow: BoxShadow(
+          /*boxShadow: BoxShadow(
             color: Colors.black12,
             offset: Offset(0.0,5.0*factor),
             blurRadius: 5.0*factor,
-          ),
+          ),*/
         ),
         child: Row(
           children: [
