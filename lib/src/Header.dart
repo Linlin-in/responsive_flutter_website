@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_button/flutter_animated_button.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 class Header extends StatefulWidget {
   @override
@@ -9,8 +11,8 @@ class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xff373e98),
-      height: 60.0,
+      color: Color(0xffe21d53),
+      height: 90.0,
       width: MediaQuery.of(context).size.width,
       child: Row(
         children: [
@@ -23,13 +25,13 @@ class _HeaderState extends State<Header> {
           SizedBox(
             width: 10.0,
           ),
-          Text('Freelancer',
-          //style:GoogleFonts.nunito(color: Colors.white,fontSize: 18.0),
+          Text('LOGO',
+            //style:GoogleFonts.nunito(color: Colors.white,fontSize: 18.0),
           ),
           SizedBox(
             width: 40.0,
           ),
-          Row(
+          /* Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -59,16 +61,16 @@ class _HeaderState extends State<Header> {
                 text: 'About',
               ),
             ],
-          ),
+          ),*/
           SizedBox(
             width: 250.0,
           ),
           Row(
             //mainAxisAlignment: ,
             children: [
-              Text('Sign up',
-              //style: ,
-                ),
+             /* Text('Sign up',
+                //style: ,
+              ),*/
               SizedBox(
                 width: 10.0,
               ),
@@ -78,10 +80,89 @@ class _HeaderState extends State<Header> {
                 color: Colors.white,
               ),
               SizedBox(
-                width: 10.0,
+                width: 280.0,
               ),
-              Text('Log In',
-                //style: ,
+              AnimatedButton(
+                onPress:(){} ,
+                height: 55,
+                width: 140,
+                text: 'ABOUT US',
+                isReverse: true,
+                selectedTextColor: Colors.pinkAccent,
+                transitionType: TransitionType.LEFT_TO_RIGHT,
+                //textStyle: submitTextStyle,
+                backgroundColor: Colors.blue,
+                borderColor: Colors.yellow,
+                borderRadius:50,
+                borderWidth: 2,
+              ),
+              SizedBox(
+                width: 3.0,
+              ),
+              AnimatedButton(
+                onPress:(){} ,
+                height: 55,
+                width: 140,
+                text: 'GAMES',
+                isReverse: true,
+                selectedTextColor: Colors.pinkAccent,
+                transitionType: TransitionType.LEFT_TO_RIGHT,
+                //textStyle: submitTextStyle,
+                backgroundColor: Colors.blue,
+                borderColor: Colors.yellow,
+                borderRadius:50,
+                borderWidth: 2,
+              ),
+              SizedBox(
+                width: 3.0,
+              ),
+              AnimatedButton(
+                onPress:(){} ,
+                height: 55,
+                width: 140,
+                text: 'LIFE AT LAST B',
+                isReverse: true,
+                selectedTextColor: Colors.pinkAccent,
+                transitionType: TransitionType.LEFT_TO_RIGHT,
+                //textStyle: submitTextStyle,
+                backgroundColor: Colors.blue,
+                borderColor: Colors.yellow,
+                borderRadius:50,
+                borderWidth: 2,
+              ),
+              SizedBox(
+                width: 3.0,
+              ),
+              AnimatedButton(
+                onPress:(){} ,
+                height: 55,
+                width: 140,
+                text: 'CAREERS',
+                isReverse: true,
+                selectedTextColor: Colors.pinkAccent,
+                transitionType: TransitionType.LEFT_TO_RIGHT,
+                //textStyle: submitTextStyle,
+                backgroundColor: Colors.blue,
+                borderColor: Colors.yellow,
+                borderRadius:50,
+                borderWidth: 2,
+              ),
+              SizedBox(
+                width: 3.0,
+              ),
+              AnimatedButton(
+                onPress:(){} ,
+                height: 55,
+                width: 140,
+                text: 'CONTACT',
+                isReverse: true,
+                selectedTextColor: Colors.pinkAccent,
+                transitionType: TransitionType.LEFT_TO_RIGHT,
+                //textStyle: submitTextStyle,
+                backgroundColor: Colors.blue,
+                borderColor: Colors.yellow,
+                borderRadius:50,
+                borderWidth: 2,
               ),
             ],
           ),
@@ -99,9 +180,9 @@ class HeaderNav extends StatefulWidget {
     required this.selected, //required eklendl
     required this.text,  //same
 
-});
-    @override
-    _HeaderNavState createState() => _HeaderNavState();
+  });
+  @override
+  _HeaderNavState createState() => _HeaderNavState();
 }
 
 class _HeaderNavState extends State<HeaderNav> {
@@ -113,21 +194,21 @@ class _HeaderNavState extends State<HeaderNav> {
         //widget.text,
         //style
         widget.selected
-          ?SizedBox(
+            ?SizedBox(
           height: 5.0,
         )
-          :SizedBox(),
+            :SizedBox(),
 
         widget.selected
             ?SizedBox(
-              height: 5.0,
+          height: 5.0,
         )
             :SizedBox(),
 
         widget.selected
             ?CircleAvatar(
-              backgroundColor: Colors.black,
-              radius: 2.0,
+          backgroundColor: Colors.black,
+          radius: 2.0,
         )
             :SizedBox(),
 
