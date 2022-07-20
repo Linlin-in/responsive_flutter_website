@@ -1,7 +1,9 @@
+import 'dart:html';
 import 'dart:math';
 //import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:of_of/src/Header.dart';
 import 'package:of_of/src/InfoPalette.dart';
 import 'package:of_of/src/ProfileImage.dart';
@@ -9,7 +11,9 @@ import 'package:of_of/src/ProfileTile.dart';
 
 void main() {
   runApp( MaterialApp(
+    debugShowCheckedModeBanner: true,
      home: MyApp(),
+     title: 'Last Bite',
     ),
   );
 }
@@ -53,9 +57,53 @@ class _MyAppState extends State<MyApp> {
                         color: Colors.green,
                       ),
                       Container(
+                        decoration: BoxDecoration(
+                          color: Colors.black12,
+                          image: DecorationImage(
+                            image: AssetImage(
+                              'assets/images/indir.jpg'
+                              //fit: BoxFit.fitHeight,
+
+                            ),
+                          ),
+
+                        ),
                         height: 700.0,
                         width: 1536.0,
-                        color: Colors.yellow,
+                        //color: Colors.yellow,
+                      ),
+                      Container(
+                        child: Positioned(
+                          left: MediaQuery.of(context).size.width/2,
+                          top: MediaQuery.of(context).size.height/2+90,
+                          child: AnimatedButton(
+
+                            onPress:(){} ,
+                            height: 55,
+                            width: 140,
+                            text: 'CAREERS',
+                            isReverse: true,
+                            selectedTextColor: Colors.pinkAccent,
+                            transitionType: TransitionType.LEFT_TO_RIGHT,
+                            //textStyle: submitTextStyle,
+                            backgroundColor: Colors.blue,
+                            borderColor: Colors.yellow,
+                            borderRadius:50,
+                            borderWidth: 2,
+                          ),
+                        ),
+                        //width: MediaQuery.of(context).size.width,
+                        width: 1536.0,
+                        height: 900,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: AssetImage(
+                              "assets/images/indir.jpg",
+
+                            ),
+                          ),
+                        ),
                       ),
                       Container(
                         height: 700.0,
