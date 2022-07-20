@@ -25,7 +25,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
-  String string = 'Pelin';
+  //String string = 'Pelin';
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -73,25 +73,30 @@ class _MyAppState extends State<MyApp> {
                         //color: Colors.yellow,
                       ),
                       Container(
-                        child: Positioned(
-                          left: MediaQuery.of(context).size.width/2,
-                          top: MediaQuery.of(context).size.height/2+90,
-                          child: AnimatedButton(
+                        child:Column(
+                          children: <Widget> [
+                            SizedBox(
+                              width: 200,
+                              height: 745,
+                            ),
+                            AnimatedButton(
 
-                            onPress:(){} ,
-                            height: 55,
-                            width: 140,
-                            text: 'CAREERS',
-                            isReverse: true,
-                            selectedTextColor: Colors.pinkAccent,
-                            transitionType: TransitionType.LEFT_TO_RIGHT,
-                            //textStyle: submitTextStyle,
-                            backgroundColor: Colors.blue,
-                            borderColor: Colors.yellow,
-                            borderRadius:50,
-                            borderWidth: 2,
-                          ),
+                              onPress:(){} ,
+                              height: 55,
+                              width: 140,
+                              text: 'CAREERS',
+                              isReverse: true,
+                              selectedTextColor: Colors.pinkAccent,
+                              transitionType: TransitionType.LEFT_TO_RIGHT,
+                              //textStyle: submitTextStyle,
+                              backgroundColor: Colors.blue,
+                              borderColor: Colors.yellow,
+                              borderRadius:50,
+                              borderWidth: 2,
+                            ),
+                          ],
                         ),
+
                         //width: MediaQuery.of(context).size.width,
                         width: 1536.0,
                         height: 900,
