@@ -11,7 +11,7 @@ class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xffe21d53),
+      color: Color(0xffd92958),
       height: 90.0,
       width: MediaQuery.of(context).size.width,
       child: Row(
