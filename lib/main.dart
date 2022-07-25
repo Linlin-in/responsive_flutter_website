@@ -1,6 +1,7 @@
 import 'dart:html';
 import 'dart:math';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:of_of/src/Footer.dart';
 //import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -39,6 +40,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               Stack(
                 children: [
+                  Footer(),
                   Column(
                     children: [
                       Container(
@@ -123,6 +125,7 @@ class _MyAppState extends State<MyApp> {
                         width: 1536.0,
                         color: Colors.pink[100],
                       ),
+                      Footer(),
                     ],
                   ),
                   Header(),
