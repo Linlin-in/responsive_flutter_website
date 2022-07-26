@@ -13,35 +13,39 @@ class _FooterState extends State<Footer> {
   Widget build(BuildContext context) {
     return Container(
       width: 1536,
-      height: 350,
+      height: 288,
       color: Colors.pink[900],
       child: Column(
         children: <Widget>[
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              SizedBox(
-                width: 100.0,
-              ),
               Column(
                 children: <Widget>[
                   SizedBox(
                     height: 80,
                   ),
-                  Image.asset('assets/images/indir.jpg'),
+                  Container(
+                      width: 100,
+                      height: 100,
+                      child: Image.asset('assets/images/logo.png')),
                   SizedBox(
                     height: 30,
                   ),
                 ],
-              ),
-              SizedBox(
-                width: 200,
               ),
               Column(
                 children: <Widget>[
                   SizedBox(
                     height: 30,
                   ),
-                  Text('SOCIAL'),
+                  Text(
+                    'SOCIAL',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Poppins-SemiBold',
+                        fontSize: 15),
+                  ),
                   SizedBox(
                     height: 30,
                   ),
@@ -107,46 +111,88 @@ class _FooterState extends State<Footer> {
                   ),
                 ],
               ),
-              SizedBox(
-                width: 200,
-              ),
               Column(
                 children: <Widget>[
-                  Text('LEGAL'),
+                  Text(
+                    'LEGAL',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Poppins-SemiBold',
+                        fontSize: 15),
+                  ),
                   SizedBox(
                     height: 20,
                   ),
-                  TextButton(onPressed: () {},
+                  TextButton(
+                    onPressed: () {},
                     style: TextButton.styleFrom(
                       primary: Colors.pink,
                     ),
-                      child: Text('Terms&Privacy'),
+                    child: Text('Terms&Privacy'),
                   ),
                 ],
               ),
-              SizedBox(
-                width: 200,
-              ),
               Column(
                 children: <Widget>[
-                  Text('LEGAL'),
+                  Text(
+                    'CONTACT',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Poppins-SemiBold',
+                        fontSize: 15),
+                  ),
                   SizedBox(
                     height: 20,
+                  ),
+                  Text(
+                    'E-mail',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Poppins-SemiBold',
+                        fontSize: 15),
                   ),
                   TextButton(
                     style: TextButton.styleFrom(
                       primary: Colors.pink,
                     ),
                     onPressed: () {},
-                    child: Text('Terms&Privacy'),
+                    child: Text('herneyse@gmail.com'),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Address',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Poppins-SemiBold',
+                        fontSize: 15),
+                  ),
+                  Text(
+                    ' Cihannüma, Barbaros Blv. Yıldız APT ',
+                    style: TextStyle(
+                        color: Colors.pink,
+                        fontFamily: 'Poppins-SemiBold',
+                        fontSize: 15),
+                  ),
+                  Text(
+                    ' D:No:69/11, 34353 Beşiktaş/İstanbul ',
+                    style: TextStyle(
+                        color: Colors.pink,
+                        fontFamily: 'Poppins-SemiBold',
+                        fontSize: 15),
                   ),
                 ],
               ),
-
-              //Container(),
-              //Container(),
-              //Container(),
             ],
+          ),
+          Container(
+            width: 1536,
+            height: 38,
+            color: Colors.pink.shade700,
+            child: Center(
+              child: Text('Copyright © 2022 Last Bite Games'),
+            ),
           ),
         ],
       ),
