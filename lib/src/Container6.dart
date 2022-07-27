@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 
+import 'Careers.dart';
+
 class Container6 extends StatefulWidget {
 
   @override
@@ -22,7 +24,12 @@ class _Container6State extends State<Container6> {
           ),
 
           AnimatedButton(
-            onPress: () {},
+            onPress: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Careers()),
+              );
+            },
             height: 55,
             width: 300,
             text: 'See Open Positions',

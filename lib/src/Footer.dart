@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'NewPageDeneme.dart';
+
 class Footer extends StatefulWidget {
   const Footer({Key? key}) : super(key: key);
 
@@ -25,10 +27,16 @@ class _FooterState extends State<Footer> {
                   SizedBox(
                     height: 80,
                   ),
-                  Container(
-                      width: 100,
-                      height: 100,
-                      child: Image.asset('assets/images/logo.png')),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(new MaterialPageRoute(
+                          builder: (BuildContext context) => new NewPage()));
+                    },
+                    child: Container(
+                        width: 100,
+                        height: 100,
+                        child: Image.asset('assets/images/logo.png')),
+                  ),
                   SizedBox(
                     height: 30,
                   ),
@@ -57,6 +65,9 @@ class _FooterState extends State<Footer> {
                     child: Row(
                       children: [
                         Text('Instagram'),
+                        SizedBox(
+                          width: 5.0,
+                        ),
                         Icon(FontAwesomeIcons.instagram),
                       ],
                     ),
@@ -72,6 +83,9 @@ class _FooterState extends State<Footer> {
                     child: Row(
                       children: [
                         Text('LinkedIn'),
+                        SizedBox(
+                          width: 3.0,
+                        ),
                         Icon(FontAwesomeIcons.linkedinIn),
                       ],
                     ),
@@ -87,6 +101,9 @@ class _FooterState extends State<Footer> {
                     child: Row(
                       children: [
                         Text('Facebook'),
+                        SizedBox(
+                          width: 3.0,
+                        ),
                         Icon(FontAwesomeIcons.facebook),
                       ],
                     ),
@@ -102,6 +119,9 @@ class _FooterState extends State<Footer> {
                     child: Row(
                       children: [
                         Text('Twitter'),
+                        SizedBox(
+                          width: 3.0,
+                        ),
                         Icon(FontAwesomeIcons.twitter),
                       ],
                     ),
