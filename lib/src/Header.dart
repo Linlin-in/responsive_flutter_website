@@ -53,10 +53,7 @@ class _HeaderState extends State<Header> {
               Row(
                 children: [
                   SizedBox(
-                    width: 10.0,
-                  ),
-                  SizedBox(
-                    width: 280.0,
+                    width: 290.0,
                   ),
                   AnimatedButton(
                     onPress: () {
@@ -105,8 +102,12 @@ class _HeaderState extends State<Header> {
                   AnimatedButton(
                     onPress: () {},
                     height: 55,
-                    width: 230,
+                    width: 200,
                     text: 'LIFE AT LAST BITE',
+                    textStyle: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
                     isReverse: true,
                     selectedTextColor: Colors.pinkAccent,
                     transitionType: TransitionType.LEFT_TO_RIGHT,

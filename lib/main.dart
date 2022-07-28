@@ -39,28 +39,26 @@ class _MyAppState extends State<MyApp> {
         color: Colors.white,
         //width: double.infinity,
         child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Stack(
-                  children: [
-                    Column(
-                      children: [
-                        Container1(),
-                        Container2(),
-                        Container3(),
-                        Container4(),
-                        Container5(),
-                        Container6(),
-                        Footer(),
-                      ],
-                    ),
-                    Header(),
-                  ],
-                ),
-              ],
-            ),
+          child: Column(
+            
+            children: [
+              Stack(
+                children: [
+                  Column(
+                    children: [
+                      Container1(),
+                      Container2(),
+                      Container3(),
+                      Container4(),
+                      Container5(),
+                      Container6(),
+                      Footer(),
+                    ],
+                  ),
+                  Header(),
+                ],
+              ),
+            ],
           ),
         ),
       ),

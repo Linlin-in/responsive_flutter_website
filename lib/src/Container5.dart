@@ -15,32 +15,34 @@ class _Container5State extends State<Container5> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Column(
-            children: <Widget>[
-              SizedBox(
-                height: 90,
-              ),
-              Image(image: AssetImage(
-                "assets/images/indir.jpg",
-              ),),
-              SizedBox(
-                height: 10,
-              ),
-              Image(image: AssetImage(
-                "assets/images/indir.jpg",
-              ),),
-            ],
+          Expanded(
+            child: Column(
+              children: <Widget>[
+                Expanded(
+                  child: Image(image: AssetImage(
+                    "assets/images/indir.jpg",
+                  ),),
+                ),
+                Expanded(
+                  child: Image(image: AssetImage(
+                    "assets/images/indir.jpg",
+                  ),),
+                ),
+              ],
+            ),
           ),
-          Image(image: AssetImage(
-            "assets/images/indir.jpg",
-          ),),
-          Text(
+          Expanded(
+            child: Image(image: AssetImage(
+              "assets/images/indir.jpg",
+            ),),
+          ),
+          Expanded(child: Text(
             'Life at X',
             style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'Poppins-SemiBold',
                 fontSize: 25),
-          ),
+          ),),
 
 
 

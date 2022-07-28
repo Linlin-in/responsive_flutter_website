@@ -23,27 +23,29 @@ class _Container6State extends State<Container6> {
             height: 400,
           ),
 
-          AnimatedButton(
-            onPress: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Careers()),
-              );
-            },
-            height: 55,
-            width: 300,
-            text: 'See Open Positions',
-            textStyle: TextStyle(
-                fontSize: 25,
-                fontFamily: 'Poppins-SemiBold'),
-            isReverse: true,
-            selectedTextColor: Colors.pinkAccent,
-            transitionType: TransitionType.LEFT_TO_RIGHT,
-            //textStyle: submitTextStyle,
-            backgroundColor: Colors.grey,
-            borderColor: Colors.purple,
-            borderRadius: 50,
-            borderWidth: 2,
+          Expanded(
+            child: AnimatedButton(
+              onPress: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Careers()),
+                );
+              },
+              height: 55,
+              width: 300,
+              text: 'See Open Positions',
+              textStyle: TextStyle(
+                  fontSize: 25,
+                  fontFamily: 'Poppins-SemiBold'),
+              isReverse: true,
+              selectedTextColor: Colors.pinkAccent,
+              transitionType: TransitionType.LEFT_TO_RIGHT,
+              //textStyle: submitTextStyle,
+              backgroundColor: Colors.grey,
+              borderColor: Colors.purple,
+              borderRadius: 50,
+              borderWidth: 2,
+            ),
           ),
         ],
       ),

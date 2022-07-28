@@ -13,37 +13,45 @@ class _Container3State extends State<Container3> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-
-              Container(
-                width: 150,
-                height: 100,
-                child: Image(
-                  image: AssetImage('assets/images/google.jpg'),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                  flex:1,
+                  child: Container(
+                    width: 150,
+                    height: 100,
+                    child: Image(
+                      image: AssetImage('assets/images/google.jpg'),
+                    ),
+                  ),
                 ),
-              ),
-              SizedBox(
-                width: 30.0,
-              ),
-              Container(
-                width: 150,
-                height: 100,
-                child: Image(
-                  image: AssetImage('assets/images/apple.png'),
+                SizedBox(
+                  width: 30.0,
                 ),
-              ),
-            ],
-          ),
-          Container(
-            width: 300,
-            height: 300,
-            child: Image(
-              image: AssetImage('assets/images/indir.jpg'),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    width: 150,
+                    height: 100,
+                    child: Image(
+                      image: AssetImage('assets/images/apple.png'),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-
+          Expanded(
+            child: Container(
+              width: 300,
+              height: 300,
+              child: Image(
+                image: AssetImage('assets/images/indir.jpg'),
+              ),
+            ),
+          ),
         ],
       ),
       height: 450.0,

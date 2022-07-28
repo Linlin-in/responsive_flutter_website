@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'NewPageDeneme.dart';
 
@@ -11,6 +12,13 @@ class Footer extends StatefulWidget {
 }
 
 class _FooterState extends State<Footer> {
+  launchUrl(String url) async{
+    if(await canLaunch(url)){
+      await launch(url);
+    }else{
+      throw 'Could not launch $url';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,191 +26,206 @@ class _FooterState extends State<Footer> {
       height: 288,
       color: Colors.pink[900],
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 80,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (BuildContext context) => new NewPage()));
-                    },
-                    child: Container(
-                        width: 100,
-                        height: 100,
-                        child: Image.asset('assets/images/logo.png')),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(
+                      height: 80,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(new MaterialPageRoute(
+                            builder: (BuildContext context) => new NewPage()));
+                      },
+                      child: Container(
+                          width: 100,
+                          height: 100,
+                          child: Image.asset('assets/images/logo.png')),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                  ],
+                ),
               ),
-              Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Text(
-                    'SOCIAL',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Poppins-SemiBold',
-                        fontSize: 15),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      primary: Colors.pink,
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Text(
+                      'SOCIAL',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Poppins-SemiBold',
+                          fontSize: 15),
                     ),
-                    onPressed: () {},
-                    child: Row(
-                      children: [
-                        Text('Instagram'),
-                        SizedBox(
-                          width: 5.0,
+                    SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(
+                      width: 110,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          primary: Colors.pink,
                         ),
-                        Icon(FontAwesomeIcons.instagram),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      primary: Colors.pink,
-                    ),
-                    onPressed: () {},
-                    child: Row(
-                      children: [
-                        Text('LinkedIn'),
-                        SizedBox(
-                          width: 3.0,
+                        onPressed: () {
+                          const url = 'https://www.youtube.com/';
+                          launchUrl(url);
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text('Instagram'),
+                            Icon(FontAwesomeIcons.instagram),
+                          ],
                         ),
-                        Icon(FontAwesomeIcons.linkedinIn),
-                      ],
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      primary: Colors.pink,
-                    ),
-                    onPressed: () {},
-                    child: Row(
-                      children: [
-                        Text('Facebook'),
-                        SizedBox(
-                          width: 3.0,
+
+                    SizedBox(
+                      width: 110,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          primary: Colors.pink,
                         ),
-                        Icon(FontAwesomeIcons.facebook),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      primary: Colors.pink,
-                    ),
-                    onPressed: () {},
-                    child: Row(
-                      children: [
-                        Text('Twitter'),
-                        SizedBox(
-                          width: 3.0,
+                        onPressed: () {
+                          const url = 'https://www.youtube.com/';
+                          launchUrl(url);
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text('LinkedIn'),
+                            Icon(FontAwesomeIcons.linkedinIn),
+                          ],
                         ),
-                        Icon(FontAwesomeIcons.twitter),
-                      ],
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                ],
+
+                    SizedBox(
+                      width: 110,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          primary: Colors.pink,
+                        ),
+                        onPressed: () {
+                          const url = 'https://www.youtube.com/';
+                          launchUrl(url);
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text('Facebook'),
+                            Icon(FontAwesomeIcons.facebook),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(
+                      width: 110,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          primary: Colors.pink,
+                        ),
+                        onPressed: () {
+                          const url = 'https://www.youtube.com/';
+                          launchUrl(url);
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text('Twitter'),
+                            Icon(FontAwesomeIcons.twitter),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
               ),
-              Column(
-                children: <Widget>[
-                  Text(
-                    'LEGAL',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Poppins-SemiBold',
-                        fontSize: 15),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      primary: Colors.pink,
+              Expanded(
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      'LEGAL',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Poppins-SemiBold',
+                          fontSize: 15),
                     ),
-                    child: Text('Terms&Privacy'),
-                  ),
-                ],
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      style: TextButton.styleFrom(
+                        primary: Colors.pink,
+                      ),
+                      child: Text('Terms&Privacy'),
+                    ),
+                  ],
+                ),
               ),
-              Column(
-                children: <Widget>[
-                  Text(
-                    'CONTACT',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Poppins-SemiBold',
-                        fontSize: 15),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'E-mail',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Poppins-SemiBold',
-                        fontSize: 15),
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      primary: Colors.pink,
+              Expanded(
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      'CONTACT',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Poppins-SemiBold',
+                          fontSize: 15),
                     ),
-                    onPressed: () {},
-                    child: Text('herneyse@gmail.com'),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Address',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Poppins-SemiBold',
-                        fontSize: 15),
-                  ),
-                  Text(
-                    ' Cihannüma, Barbaros Blv. Yıldız APT ',
-                    style: TextStyle(
-                        color: Colors.pink,
-                        fontFamily: 'Poppins-SemiBold',
-                        fontSize: 15),
-                  ),
-                  Text(
-                    ' D:No:69/11, 34353 Beşiktaş/İstanbul ',
-                    style: TextStyle(
-                        color: Colors.pink,
-                        fontFamily: 'Poppins-SemiBold',
-                        fontSize: 15),
-                  ),
-                ],
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      'E-mail',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Poppins-SemiBold',
+                          fontSize: 15),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        primary: Colors.pink,
+                      ),
+                      onPressed: () {},
+                      child: Text('herneyse@gmail.com'),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      'Address',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Poppins-SemiBold',
+                          fontSize: 15),
+                    ),
+                    Text(
+                      ' Cihannüma, Barbaros Blv. Yıldız APT ',
+                      style: TextStyle(
+                          color: Colors.pink,
+                          fontFamily: 'Poppins-SemiBold',
+                          fontSize: 15),
+                    ),
+                    Text(
+                      ' D:No:69/11, 34353 Beşiktaş/İstanbul ',
+                      style: TextStyle(
+                          color: Colors.pink,
+                          fontFamily: 'Poppins-SemiBold',
+                          fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
